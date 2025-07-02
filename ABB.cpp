@@ -1,4 +1,4 @@
-  #include <iostream>
+#include <iostream>
 using namespace std;
 
 // ESTRUCTURA DEL NODO.
@@ -13,3 +13,12 @@ struct Nodo {
         derecho = nullptr;
     }
 };
+// Arbol binario, creacion.
+class ArbolBinario {
+private:
+    Nodo* raiz;
+
+    Nodo* insertar(Nodo* nodo, int valor) {
+        if (nodo == nullptr) {
+            cout << "Elemento no existe, se acaba de ingresar." << endl;
+            return new Nodo(valor);
